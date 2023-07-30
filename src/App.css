@@ -37,5 +37,19 @@ div.selected {
   background-color: greenyellow;
   transition: transform 1s;
   transform-origin: center;
-  transform: rotateY(360deg);
+  animation: transform 1s ease-in-out;
+}
+
+@keyframes transform {
+  0% {
+    opacity: 0;
+    transform: rotateY(180deg);
+  }
+  50% {
+    transform: rotateY(270deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(360deg);
+  }
 }
